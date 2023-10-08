@@ -1,0 +1,132 @@
+@font-face {
+    font-family:hii ;
+    src: url(ARLRDBD.TTF);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(219, 192, 203);
+}
+#game{
+    width: 80%;
+    height: 90%;
+    background-color:white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#nav{
+    width: 100%;
+    height: 10vh;
+    background-color:rgb(120, 12, 30);
+    color: white;
+    /* font-family: gilroy; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav h3{
+    font-size: 2vw;
+    font-family: hii;
+    user-select: none;
+}
+.gamecontainer{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 50px;
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: gilroy;
+}
+.box{
+    border: 1.5px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(224, 198, 208);
+}
+.info{
+    font-size: 25px;
+    user-select: none;
+}
+.gameinfo{
+    padding: 40px 40px;
+}
+.gameinfo h1{
+    margin-bottom: 20px;
+    font-family: gilroy;
+    color: rgb(120, 12, 30);
+    user-select: none;
+}
+.imgbox img{
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    margin: 20px 0px;
+    padding: 5px 20px;
+    background: rgb(220, 195, 205);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#reset:hover{
+    background-color: white;
+}
+@media(max-width: 500px){
+    .gamecontainer{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    #nav h3{
+        font-size: 20px;
+    }
+    .container{
+        margin-left: 80px;
+        grid-template-rows: repeat(3,15vw);
+        grid-template-columns: repeat(3,15vw);
+    }
+    .gameinfo h1{
+        margin-bottom: 5px;
+        font-family: gilroy;
+        font-size: 23px;
+        color: rgb(120, 12, 30);
+    }
+    #reset{
+        margin: 5px 0px;
+    }
+    .info{
+        font-size: 20px;
+    }
+}
